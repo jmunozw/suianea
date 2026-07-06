@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#7c3aed" />
+  <title>AENA TIC — Simulacros</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">AENA TIC IIIJ05</p>
+      <h1>Simulacros</h1>
+    </div>
+    <div class="timer" id="timer">00:00</div>
+  </header>
+
+  <main class="layout">
+    <section class="card setup" id="setupPanel">
+      <label for="testSelect">Elige test</label>
+      <select id="testSelect">
+        <option value="">Cargando tests...</option>
+      </select>
+      <button id="loadBtn" class="primary">Cargar test</button>
+      <p class="muted small">
+        Los tests se leen desde <code>tests/tests.json</code>. Añade ahí cada <code>aenaXX.js</code> o <code>testXX.js</code>.
+      </p>
+    </section>
+
+    <section class="card hidden" id="quizPanel">
+      <div class="quiz-top">
+        <div>
+          <p class="eyebrow" id="testName">Test</p>
+          <h2 id="questionTitle">Pregunta</h2>
+        </div>
+        <div class="progress-box">
+          <span id="progressText">0/0</span>
+          <div class="progress"><span id="progressBar"></span></div>
+        </div>
+      </div>
+
+      <div class="question-meta" id="questionMeta"></div>
+      <p class="question-text" id="questionText"></p>
+      <div class="options" id="optionsBox"></div>
+
+      <div class="nav-row">
+        <button id="prevBtn">Anterior</button>
+        <button id="blankBtn">Dejar en blanco</button>
+        <button id="nextBtn" class="primary">Siguiente</button>
+      </div>
+
+      <details class="jump-card">
+        <summary>Ver mapa de preguntas</summary>
+        <div class="jump-grid" id="jumpGrid"></div>
+      </details>
+
+      <div class="finish-row">
+        <button id="submitBtn" class="danger">Corregir simulacro</button>
+        <button id="resetBtn">Reiniciar respuestas</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="resultsPanel">
+      <h2>Resultado</h2>
+      <div id="resultsBox"></div>
+      <div class="finish-row">
+        <button id="copyBtn" class="primary">Copiar resultado</button>
+        <button id="backBtn">Volver al test</button>
+      </div>
+      <div id="wrongBox"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Modo móvil listo · Guarda tus respuestas en este dispositivo</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

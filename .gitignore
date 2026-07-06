@@ -1,0 +1,22 @@
+# Carpeta de copias antiguas
+backup/
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Dependencias si algún día usas npm
+node_modules/
+
+# Builds temporales
+dist/
+build/
+
+# Cachés
+.cache/

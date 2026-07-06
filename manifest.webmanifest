@@ -1,0 +1,9 @@
+{
+  "name": "AENA TIC Simulacros",
+  "short_name": "AENA TIC",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f3ff",
+  "theme_color": "#7c3aed",
+  "icons": []
+}
