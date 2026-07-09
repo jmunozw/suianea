@@ -136,5 +136,18 @@
     {
     "name": "AENA 08",
     "file": "aena08.js"
+  },
+    {
+    "name": "Test 09 Elite",
+    "file": "test091.js"
+  }
+  ,
+    {
+    "name": "AENA 09",
+    "file": "aena09.js"
+  },
+    {
+    "name": "AENA 10",
+    "file": "aena10.js"
   }
 ]
